@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="215.0" prefWidth="413.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.enjoypdf.controller.MainController">
+  <children>
+    <Label layoutX="24.0" layoutY="13.0" text="Ссылка на 1 файл" />
+    <Label layoutX="24.0" layoutY="58.0" text="Ссылка на 2 файл" />
+    <TextField fx:id="link1" layoutX="24.0" layoutY="30.0" prefHeight="25.0" prefWidth="300.0" />
+    <TextField fx:id="link2" layoutX="24.0" layoutY="75.0" prefWidth="300.0" />
+    <Button fx:id="mergeButton" layoutX="240.0" layoutY="160.0" mnemonicParsing="false" onAction="#mergeAction" text="Объединить" />
+      <Button fx:id="selectButton1" layoutX="333.0" layoutY="30.0" mnemonicParsing="false" onAction="#selectAction1" text="Выбрать" />
+      <Button fx:id="selectButton2" layoutX="333.0" layoutY="75.0" mnemonicParsing="false" onAction="#selectAction2" text="Выбрать" />
+      <Button fx:id="clearButton" layoutX="24.0" layoutY="160.0" mnemonicParsing="false" onAction="#clearAction" text="Сброс" />
+      <TextField fx:id="link3" layoutX="24.0" layoutY="121.0" prefWidth="300.0" />
+      <Label layoutX="24.0" layoutY="104.0" text="Куда сохранять итоговый файл" />
+      <Button fx:id="selectButton3" layoutX="333.0" layoutY="121.0" mnemonicParsing="false" onAction="#selectAction3" text="Выбрать" />
+      <Label fx:id="errorLabel" layoutX="24.0" layoutY="193.0" text="Ошибка" visible="false" />
+  </children>
+</AnchorPane>
