@@ -7,8 +7,12 @@ import org.apache.pdfbox.multipdf.PDFMergerUtility;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 
+import com.example.enjoypdf.App;
+
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -38,6 +42,7 @@ private Label errorLabel;
 	public void clearAction(){
 		link1.setText("");
 		link2.setText("");
+		link3.setText("");
 		errorLabel.setVisible(false);
 	}
 	
@@ -98,13 +103,7 @@ private Label errorLabel;
 		File file1 = new File(link1.getText()); 
 		File file2 = new File(link2.getText()); 
 		
-	/*    PDDocument doc1 = PDDocument. load (file1);
-	     
-	    PDDocument doc2 = PDDocument. load (file2);*/
-		
-		
 	    String  newfile = link3.getText() + "\\merged.pdf";
-	
 		
 		PDFMergerUtility PDFmerger = new PDFMergerUtility(); 
 		PDFmerger.setDestinationFileName(newfile);
@@ -113,19 +112,28 @@ private Label errorLabel;
 		PDFmerger.addSource(file2);
 		
 		PDFmerger.mergeDocuments();
-	/*	doc1.close();
-		doc2.close();*/
-	
 	
 	    Alert alert = new Alert(AlertType.INFORMATION);
 	    alert.setTitle("Результат");
 	
-	    // Header Text: null
 	    alert.setHeaderText(null);
 	    alert.setContentText("Файл успешно создан \n " + newfile);
 	
 	    alert.showAndWait();
 		
+	}
+	
+	public void settingsAction() throws IOException {
+			App.status=1;
+			
+			String fxmlFile = "/fxml/settings.fxml";
+	        FXMLLoader loader = new FXMLLoader();
+	        Parent root = (Parent) loader.load(getClass().getResourceAsStream(fxmlFile));
+	        App.mainStage.setTitle("Объединение PDF - Настройки");
+	        App.mainStage.setScene(new Scene(root));
+	        App.mainStage.setResizable(false);
+
+	        App.mainStage.show();
 	}
 	
 

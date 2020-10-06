@@ -19,5 +19,6 @@
       <Label layoutX="24.0" layoutY="104.0" text="Куда сохранять итоговый файл" />
       <Button fx:id="selectButton3" layoutX="333.0" layoutY="121.0" mnemonicParsing="false" onAction="#selectAction3" text="Выбрать" />
       <Label fx:id="errorLabel" layoutX="24.0" layoutY="193.0" text="Ошибка" visible="false" />
+      <Button fx:id="settingsButton" layoutX="77.0" layoutY="160.0" mnemonicParsing="false" onAction="#settingsAction" text="Настройка" />
   </children>
 </AnchorPane>
