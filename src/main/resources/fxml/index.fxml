@@ -11,14 +11,17 @@
     <Label layoutX="24.0" layoutY="58.0" text="Ссылка на 2 файл" />
     <TextField fx:id="link1" layoutX="24.0" layoutY="30.0" prefHeight="25.0" prefWidth="300.0" />
     <TextField fx:id="link2" layoutX="24.0" layoutY="75.0" prefWidth="300.0" />
-    <Button fx:id="mergeButton" layoutX="240.0" layoutY="160.0" mnemonicParsing="false" onAction="#mergeAction" text="Объединить" />
+    <TextField fx:id="newNameMergeFile" layoutX="24.0" layoutY="121.0" prefHeight="22.0" prefWidth="153.0" />
+    <Button fx:id="mergeButton" layoutX="246.0" layoutY="160.0" mnemonicParsing="false" onAction="#mergeAction" text="Объединить" />
       <Button fx:id="selectButton1" layoutX="333.0" layoutY="30.0" mnemonicParsing="false" onAction="#selectAction1" text="Выбрать" />
       <Button fx:id="selectButton2" layoutX="333.0" layoutY="75.0" mnemonicParsing="false" onAction="#selectAction2" text="Выбрать" />
       <Button fx:id="clearButton" layoutX="24.0" layoutY="160.0" mnemonicParsing="false" onAction="#clearAction" text="Сброс" />
-      <TextField fx:id="link3" layoutX="24.0" layoutY="121.0" prefWidth="300.0" />
-      <Label layoutX="24.0" layoutY="104.0" text="Куда сохранять итоговый файл" />
+      <TextField fx:id="link3" layoutX="190.0" layoutY="121.0" prefHeight="22.0" prefWidth="134.0" />
+      <Label layoutX="190.0" layoutY="101.0" text="Путь сохранения" />
       <Button fx:id="selectButton3" layoutX="333.0" layoutY="121.0" mnemonicParsing="false" onAction="#selectAction3" text="Выбрать" />
       <Label fx:id="errorLabel" layoutX="24.0" layoutY="193.0" text="Ошибка" visible="false" />
       <Button fx:id="settingsButton" layoutX="77.0" layoutY="160.0" mnemonicParsing="false" onAction="#settingsAction" text="Настройка" />
+      <Button fx:id="goSeparateButton" layoutX="158.0" layoutY="160.0" mnemonicParsing="false" onAction="#goSeparateAction" text="Разделить-&gt;" />
+      <Label layoutX="24.0" layoutY="101.0" text="Новое имя (без .pdf)" />
   </children>
 </AnchorPane>
